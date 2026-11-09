@@ -85,7 +85,7 @@ st.info(
 # because that importer is currently reporting dataset 501 as unavailable.
 UCI_ZIP_URL = (
     "https://archive.ics.uci.edu/static/public/501/"
-    "beijing+multi+site+air+quality.zip"
+    "PRSA2017_Data_20130301-20170228.zip"
 )
 
 
