@@ -21,12 +21,58 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🌍 Air Quality Prediction")
-st.subheader("SDG 11: Sustainable Cities and Communities")
-st.write(
-    "Estimate PM2.5 concentration using pollution measurements, "
-    "weather conditions, time information, and monitoring-station location."
-)
+
+# Custom HTML/CSS styling
+st.markdown("""
+<style>
+    .main-title {
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 0;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin-top: 0;
+        opacity: 0.8;
+    }
+
+    .info-card {
+        padding: 18px 22px;
+        border-radius: 14px;
+        border: 1px solid rgba(128,128,128,0.25);
+        background: rgba(128,128,128,0.08);
+        margin: 12px 0 22px 0;
+    }
+
+    .section-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    .small-note {
+        font-size: 14px;
+        opacity: 0.75;
+    }
+
+    div[data-testid="stMetric"] {
+        border: 1px solid rgba(128,128,128,0.25);
+        border-radius: 12px;
+        padding: 12px;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="main-title">🌍 Air Quality Prediction</div>
+<div class="subtitle">SDG 11 — Sustainable Cities and Communities</div>
+
+<div class="info-card">
+Estimate PM2.5 concentration using pollution measurements, weather conditions,
+time information, and monitoring-station location.
+</div>
+""", unsafe_allow_html=True)
 
 st.info(
     "This app estimates PM2.5 for an observation using measurements recorded "
@@ -318,7 +364,7 @@ with tab2:
 
 
 with tab3:
-    st.header("Dataset")
+    st.markdown('<div class="section-title">Dataset</div>', unsafe_allow_html=True)
 
     st.write(
         "Source: Beijing Multi-Site Air-Quality Data from the "
